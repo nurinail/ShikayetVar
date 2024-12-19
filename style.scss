@@ -1,0 +1,309 @@
+@import "scss/mixin";
+@import "scss/variable";
+@font-face {
+  font-family: "Visby";
+  src: url("font/VisbyRegular.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  // font-family: "Visby";
+}
+
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  //   color: green;
+}
+.container {
+  width: 100%;
+  padding: 2.8rem 8.6rem;
+  background-color: #f7f7fb;
+
+  .header {
+    @include d-flex(center, center, row, 0);
+    // border: 1px solid red;
+    .header_logo {
+      width: 14rem;
+      height: 3.4rem;
+    }
+  }
+
+  .main_banner {
+    @include d-flex(flex-start, space-between, row, 7.7rem);
+    margin-top: 2.8rem;
+    margin-inline: auto;
+    padding: 12.6rem 13rem 0 8rem;
+    width: 118rem;
+    height: 68.6rem;
+    background-color: #344187;
+    border-radius: 2.8rem;
+    // border: 1px solid red;
+    position: relative;
+
+    .main_banner_primary {
+      @include d-flex(flex-start, flex-start, column, 2rem);
+      max-width: 45.4rem;
+      //   border: 1px solid red;
+
+      .main_banner_primary_title {
+        @include d-flex(flex-start, flex-start, column, 0);
+        .main_banner_primary_title_top {
+          @include f-style(white, 4.4rem, 700, 5.6rem);
+        }
+        .main_banner_primary_title_bottom {
+          @include f-style(white, 4.4rem, 500, 5.6rem);
+        }
+      }
+      .main_banner_primary_text {
+        @include f-style(#f8f8f8, 1.8rem, 500, 2.4rem);
+      }
+      .main_banner_primary_button {
+        @include d-flex(flex-start, flex-start, row, 1.6rem);
+        .main_banner_primary_button_link {
+          @include d-flex(center, flex-start, row, 1rem);
+          width: 21rem;
+          height: 6rem;
+          padding-left: 1.8rem;
+          border-radius: 1.6rem;
+          background: #ffffff33;
+          backdrop-filter: blur(20px);
+          .main_banner_primary_button_link_icon {
+            font-size: 2.3rem;
+            color: #fffffff2;
+          }
+          .fa-apple {
+            font-size: 3rem;
+          }
+          .main_banner_primary_button_link_script {
+            @include d-flex(flex-start, flex-start, column, 0);
+            .main_banner_primary_button_link_script_title {
+              @include f-style(#ffffffe5, 1.2rem, 500, 1.4rem);
+              letter-spacing: 0.15rem;
+            }
+            .main_banner_primary_button_link_script_store {
+              @include f-style(#ffffffe5, 1.8rem, 600, 2.4rem);
+            }
+          }
+        }
+      }
+    }
+    .main_banner_phones {
+      position: relative;
+      // border: 1px solid red;
+      .main_banner_phones_one {
+        position: absolute;
+        top: -2.7rem;
+        right: 0;
+      }
+
+      .main_banner_phones_two {
+        position: absolute;
+        right: -11rem;
+        top: 12rem;
+      }
+    }
+    .main_banner_navigation {
+      position: absolute;
+      bottom: 1.8rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      .main_banner_navigation_menu {
+        @include d-flex(center, space-between, row, 0);
+        width: 71rem;
+        border: 1px solid #ececec;
+        background: #ffffff99;
+        backdrop-filter: blur(24px);
+        border-radius: 5.4rem;
+        box-shadow: 0px 4px 44px 0px #dfdfdf40;
+        .main_banner_navigation_menu_item {
+          width: 20%;
+          border-right: 1px solid #ececec;
+          text-align: center;
+          .main_banner_navigation_menu_item_link {
+            @include f-style(#6c6c6c, 1.6rem, 600, 3.2rem);
+            transition: 0.7s;
+            display: inline-block;
+            padding-block: 1.4rem;
+          }
+          .main_banner_navigation_menu_item_link:hover {
+            color: #0b0b0b;
+          }
+        }
+        .main_banner_navigation_menu_item:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .main_complaint {
+    margin-top: 10rem;
+    // text-align: center;
+    .main_complaint_top {
+      // border: 1px solid red;
+      @include d-flex(center, flex-start, column, 4rem);
+
+      .main_complaint_top_title {
+        @include f-style(#000000, 4.4rem, 500, 5.6rem);
+        .main_complaint_top_title_span {
+          @include f-style(#000000, 4.4rem, 700, 5.6rem);
+        }
+      }
+      .main_complaint_top_buttons {
+        @include d-flex(center, flex-start, row, 1.2rem);
+        // border: 1px solid red;
+        padding: 1.4rem;
+        .main_complaint_top_buttons_item {
+          @include f-style(#121212, 2rem, 600, 2.8rem);
+          @include d-flex(center, center, row, 0);
+          width: 20rem;
+          height: 7.2rem;
+          border-radius: 1.2rem;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        .main_complaint_top_buttons_partner {
+          background-color: #344187;
+          color: white;
+        }
+      }
+    }
+    .main_complaint_img {
+      width: 126.8rem;
+      height: 63.3rem;
+      margin-top: 4rem;
+      margin-inline: auto;
+      background-color: #ffffff;
+      border-radius: 3.2rem;
+      box-shadow: 0px 2px 40px -9px #c8c8c80f;
+      position: relative;
+
+      .main_complaint_img_messages {
+        .main_complaint_img_messages_item {
+          @include f-style(#1b1b1b, 2rem, 500, 3.2rem);
+          display: inline-block;
+          padding: 1.2rem 2.8rem;
+          background-color: #e9ecfc;
+          border-radius: 4rem;
+          backdrop-filter: blur(16px);
+          position: absolute;
+        }
+
+        .main_complaint_img_messages_item:nth-child(1) {
+          bottom: 26rem;
+          left: 6.7rem;
+        }
+        .main_complaint_img_messages_item:nth-child(2) {
+          top: 8.4rem;
+          left: 16rem;
+        }
+        .main_complaint_img_messages_item:nth-child(3) {
+          top: 6.8rem;
+          right: 30rem;
+        }
+        .main_complaint_img_messages_item:nth-child(4) {
+          top: 23rem;
+          right: 12rem;
+        }
+        .main_complaint_img_messages_item:nth-child(5) {
+          bottom: 10.4rem;
+          right: 6.7rem;
+        }
+      }
+
+      .main_complaint_img_phone {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  .main_question {
+    @include d-flex(center, flex-start, column, 3.7rem);
+    margin-top: 22rem;
+    .main_question_top {
+      @include d-flex(center, space-between, row, 1rem);
+      // border: 1px solid red;
+      width: 90%;
+
+      .main_question_top_title {
+        @include f-style(#3a3a3a, 4rem, 600, 5.6rem);
+      }
+
+      .main_question_top_icon {
+        @include d-flex(center, center, row, 3.6rem);
+        // border: 1px solid green;
+        .main_question_top_icon_button {
+          @include d-flex(center, center, row, 0);
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+    .main_question_cards {
+      @include d-flex(center, center, row, 5rem);
+      width: 100%;
+      // border: 1px solid red;
+
+      .main_question_cards_item {
+        @include d-flex(flex-start, space-between, column, 4.8rem);
+        background-color: #ffffff;
+        border-radius: 2.8rem;
+        width: 56rem;
+        height: 62.5rem;
+        // border: 1px solid green;
+        padding: 4rem;
+        .main_question_cards_item_chat_section {
+          @include d-flex(flex-start, flex-start, column, 4.8rem);
+          // border: 1px solid red;
+          height: 46.5rem;
+          overflow-y: auto;
+          .main_question_cards_item_chatSection_opposite {
+            @include d-flex(flex-start, flex-start, column, 2.4rem);
+            // border: 1px solid black;
+            .main_question_cards_item_chatSection_opposite_chat {
+              @include f-style(#000000, 1.8rem, 600, 2.4rem);
+              background-color: #f0f0f0;
+              padding: 2rem 4.4rem;
+              border-radius: 9.2rem 13rem 13rem 0.8rem;
+            }
+          }
+
+          .main_question_cards_item_chatSection_user {
+            @include d-flex(flex-end, flex-start, column, 2.4rem);
+            // border: 1px solid black;
+            align-self: flex-end;
+            .main_question_cards_item_chatSection_user_chat {
+              @include f-style(#ffffff, 1.8rem, 600, 2.4rem);
+              background-color: #344187;
+              padding: 2rem 4.4rem;
+              border-radius: 13rem 9.2rem 0.8rem 13rem;
+            }
+          }
+        }
+        .main_question_cards_item_note{
+        @include d-flex(center,flex-start, row, 1.4rem);
+          .main_question_cards_item_note_span{
+            @include f-style(#848AAC,2rem,600,3.2rem)
+
+          }
+        }
+      }
+    }
+  }
+}
